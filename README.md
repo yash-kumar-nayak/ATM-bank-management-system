@@ -42,3 +42,5 @@ create table login(formno varchar(20), cardnumber varchar(25), pin varchar(10));
 7 - Now create bank table to store transactions related information 
 
 create table bank(pin varchar(10), date varchar(50), type varchar(20), amount varchar(20));
+
+![Screenshot (23)](https://user-images.githubusercontent.com/114598638/235504120-b8724269-6d31-46df-af6e-2f1735344852.png)
