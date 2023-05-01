@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import javax.swing.*;
 
-public class MiniStatement extends JFrame {
-    
+public class MiniStatement extends JFrame implements ActionListener {
+    JButton exit;
     MiniStatement(String pinnumber){
         setTitle("MINI STATEMENT");
         setLayout(null);
@@ -56,11 +56,27 @@ public class MiniStatement extends JFrame {
         }
         mini.setBounds(20,140,400,200);
         setSize(400,600);
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(new Color(115, 194, 251));
         setVisible(true);
+        setLocation(150,100);
+        
+        
+        
+        
+        exit=new JButton("EXIT");
+        exit.setBounds(20,500,100,25);
+        exit.addActionListener(this);
+        exit.setBackground(Color.red);
+        exit.setForeground(Color.white);
+                add(exit);
     }
     
     public static void main(String[] args) {
         new MiniStatement("");
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        setVisible(false);
     }
 }

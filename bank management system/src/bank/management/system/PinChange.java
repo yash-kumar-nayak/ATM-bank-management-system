@@ -63,6 +63,7 @@ public class PinChange extends JFrame implements ActionListener{
          
              change=new JButton("CHANGE");
 	 change.setBounds(383, 525, 130, 30);
+         change.setBackground(Color.green);
          change.addActionListener(this);
          image.add(change);
 	

@@ -18,20 +18,29 @@ public class SignupOne extends JFrame implements ActionListener{
 	JButton next;
 	long random;
 	 SignupOne() {
-		 setTitle("PAGE 1 :NEW ACCOUNT APPLICATION FORM - PAGE 1");
+		 setTitle("PAGE 1 : NEW ACCOUNT APPLICATION FORM");
 		 setLayout(null);
 		 Random ran=new Random();
 		 random=Math.abs((ran.nextLong()%9000L)+1000L);
 		 
+                 
+                  ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/bank.png"));
+		 Image i2=i1.getImage().getScaledInstance(80, 80, Image.SCALE_DEFAULT);
+		ImageIcon i3=new  ImageIcon(i2);
+		 JLabel label=new JLabel(i3);
+		 label.setBounds(20, 10, 100, 100);
+		 add(label);
 		 
 		 JLabel formno=new JLabel("APPLICATION FORM NO "+random);
+                 formno.setForeground(Color.white);
 		 formno.setFont(new Font("Raleway", Font.BOLD,38));
 		 formno.setBounds(140, 20, 600, 40);
 		 add(formno);
 		 
 		 
 		 JLabel personalDetails=new JLabel("Page 1 : Personal Details ");
-		 personalDetails.setFont(new Font("Raleway", Font.ITALIC,22));
+                  
+		 personalDetails.setFont(new Font("Raleway", Font.BOLD,22));
 		 personalDetails.setBounds(290, 80, 400, 30);
 		 add(personalDetails);
 		 
@@ -78,12 +87,12 @@ public class SignupOne extends JFrame implements ActionListener{
 		 
 		  male=new JRadioButton("Male");
 		 male.setBounds(300, 290,80 ,30);
-		 male.setBackground(Color.WHITE);
+		 male.setBackground(new Color(115, 194, 251));
 		 add(male);
 		 
 		 female=new JRadioButton("Female");
 		 female.setBounds(400, 290,100 ,30);
-		 female.setBackground(Color.WHITE);
+		 female.setBackground(new Color(115, 194, 251));
 		 add(female);
 		 
 		 ButtonGroup genderGroup=new ButtonGroup();
@@ -111,17 +120,17 @@ public class SignupOne extends JFrame implements ActionListener{
 		 
 		  married=new JRadioButton("Married");
 		 married.setBounds(300, 390,80 ,30);
-		 married.setBackground(Color.WHITE);
+		 married.setBackground(new Color(115, 194, 251));
 		 add(married);
 		 
 		  unmarried=new JRadioButton("Unmarried");
 		 unmarried.setBounds(400, 390,100 ,30);
-		 unmarried.setBackground(Color.WHITE);
+		 unmarried.setBackground(new Color(115, 194, 251));
 		 add(unmarried);
 		 
 		  others=new JRadioButton("Others");
 		 others.setBounds(530, 390,100 ,30);
-		 others.setBackground(Color.WHITE);
+		 others.setBackground(new Color(115, 194, 251));
 		 add(others);
 		 
 		 ButtonGroup maritalGroup=new ButtonGroup();
@@ -190,7 +199,7 @@ public class SignupOne extends JFrame implements ActionListener{
 		 
 		 
 		 
-		 getContentPane().setBackground(Color.WHITE);
+		 getContentPane().setBackground(new Color(115, 194, 251));
 		setSize(850,800);
 		setLocation(300,20);
 		setVisible(true);

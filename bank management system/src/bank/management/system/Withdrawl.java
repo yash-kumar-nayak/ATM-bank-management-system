@@ -39,13 +39,15 @@ public class Withdrawl extends JFrame implements ActionListener{
          image.add(amount);
         
          withdrawl =new JButton("Withdraw");
-        withdrawl.setBounds(355, 485, 100, 30);
+        withdrawl.setBounds(400, 495, 100, 30);
         image.add(withdrawl);
+        withdrawl.setBackground(Color.green);
        withdrawl.addActionListener(this);
         
          back =new JButton("Back");
-        back.setBounds(355, 520, 100, 30);
+        back.setBounds(400, 530, 100, 30);
         image.add(back);
+//        back.setBackground(Color.red);
         back.addActionListener(this);
         
         

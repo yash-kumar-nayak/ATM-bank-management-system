@@ -20,32 +20,50 @@ public class Login extends JFrame implements ActionListener{
 		 setTitle("AUTOMATED TELLER MACHINE");
 		 setLayout(null);  //there are many layout like gride and many more.
 		 
-		 ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
+		 ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/bank.png"));
 		 Image i2=i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
 		ImageIcon i3=new  ImageIcon(i2);
 		 JLabel label=new JLabel(i3);
 		 label.setBounds(100, 10, 100, 100);
 		 add(label);
+                 
+                  ImageIcon l1=new ImageIcon(ClassLoader.getSystemResource("icons/card.png"));
+		 Image l2=l1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+		ImageIcon l3=new  ImageIcon(l2);
+		 JLabel l4=new JLabel(l3);
+		 l4.setBounds(630, 350, 100, 100);
+		 add(l4);
+                 
+                 
+		 ImageIcon s1=new ImageIcon(ClassLoader.getSystemResource("icons/backbg.png"));
+		 Image s2=s1.getImage().getScaledInstance(800, 450, Image.SCALE_DEFAULT);
+		ImageIcon s3=new  ImageIcon(s2);
+		 JLabel s4=new JLabel(s3);
+		 s4.setBounds(0, 0, 800, 450);
+		 add(s4);
 		 
 		 JLabel text=new JLabel("Welcome To ATM");
-		 text.setFont(new Font("Osward", Font.BOLD,38));
+                 text.setForeground(Color.white);
+		 text.setFont(new Font("AvantGarde", Font.BOLD,38));
 		 text.setBounds(250, 40, 400, 30);
-		 add(text);
+		 s4.add(text);
 		 
 		 JLabel cardno=new JLabel("Card No:");
+                 cardno.setForeground(Color.white);
 		 cardno.setFont(new Font("Raleway", Font.BOLD,28));
 		 cardno.setBounds(120, 150, 150, 30);
-		 add(cardno);
+		 s4.add(cardno);
 		 
 		 cardTextField=new JTextField();
 		 cardTextField.setBounds(300, 150,230 ,30);
 		 cardTextField.setFont(new Font("Arial",Font.BOLD,16));
-		 add(cardTextField);
+		 s4.add(cardTextField);
 		 
 		 JLabel pin=new JLabel("PIN:");
+                  pin.setForeground(Color.white);
 		 pin.setFont(new Font("Raleway", Font.BOLD,28));
 		 pin.setBounds(120, 220, 400, 30);
-		 add(pin);
+		 s4.add(pin);
 		 
 		 
 		 pinTextField=new JPasswordField();
@@ -59,7 +77,7 @@ public class Login extends JFrame implements ActionListener{
 		 login.setBackground(Color.BLACK);
 		 login.setForeground(Color.WHITE);
 		 login.addActionListener(this);
-		 add(login);
+		 s4.add(login);
 		 
 		 
 		 
@@ -68,7 +86,7 @@ public class Login extends JFrame implements ActionListener{
 		 clear.setBackground(Color.BLACK);
 		 clear.setForeground(Color.WHITE);
 		 clear.addActionListener(this);
-		 add(clear);
+		 s4.add(clear);
 		 
 		 
 		 signup=new JButton("SIGN UP");
@@ -76,7 +94,7 @@ public class Login extends JFrame implements ActionListener{
 		 signup.setBackground(Color.BLACK);
 		 signup.setForeground(Color.WHITE);
 		 signup.addActionListener(this);
-		 add(signup);
+		 s4.add(signup);
 		 
 		 
 		 

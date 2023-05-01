@@ -58,6 +58,7 @@ public class Transactions extends JFrame implements ActionListener{
         
         exit=new JButton("Exit");
         exit.setBounds(383, 560, 130, 30);
+        
         image.add(exit);
         exit.addActionListener(this);
         

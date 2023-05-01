@@ -19,11 +19,21 @@ public class SignupTwo  extends JFrame implements ActionListener {
          setLayout(null);
          setTitle(" PAGE 2 : NEW ACCOUNT APPLICATION FORM");
          
-         
+           ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/bank.png"));
+		 Image i2=i1.getImage().getScaledInstance(80, 80, Image.SCALE_DEFAULT);
+		ImageIcon i3=new  ImageIcon(i2);
+		 JLabel label=new JLabel(i3);
+		 label.setBounds(25, 5, 100, 100);
+		 add(label);
          JLabel additionalDetails=new JLabel("Page 2: Additional Details ");
-		 additionalDetails.setFont(new Font("Raleway", Font.ITALIC,22));
+		 additionalDetails.setFont(new Font("Raleway", Font.BOLD,22));
 		 additionalDetails.setBounds(290, 80, 400, 30);
 		 add(additionalDetails);
+                 JLabel formno1=new JLabel("APPLICATION FORM NO "+formno);
+		 formno1.setFont(new Font("Raleway", Font.BOLD,38));
+                  formno1.setForeground(Color.white);
+		 formno1.setBounds(140, 20, 600, 40);
+		 add(formno1);
                  
          JLabel name=new JLabel("Religion:");
 		 name.setFont(new Font("Raleway", Font.BOLD,20));
@@ -127,12 +137,12 @@ public class SignupTwo  extends JFrame implements ActionListener {
 		 
 		senioryes=new JRadioButton("Yes");
 		 senioryes.setBounds(300, 520,80 ,30);
-		 senioryes.setBackground(Color.WHITE);
+		 senioryes.setBackground(new Color(252,208,76));
 		 add(senioryes);
                  
 		seniorno =new JRadioButton("No");
 		 seniorno.setBounds(450, 520,80 ,30);
-		 seniorno.setBackground(Color.WHITE);
+		 seniorno.setBackground(new Color(252,208,76));
 		 add(seniorno);
                  
                  
@@ -153,12 +163,12 @@ public class SignupTwo  extends JFrame implements ActionListener {
 		 
 		 eyes=new JRadioButton("Yes");
 		 eyes.setBounds(300, 570,80 ,30);
-		 eyes.setBackground(Color.WHITE);
+		 eyes.setBackground(new Color(252,208,76));
 		 add(eyes);
                  
 		eno =new JRadioButton("No");
 		 eno.setBounds(450, 570,80 ,30);
-		 eno.setBackground(Color.WHITE);
+		 eno.setBackground(new Color(252,208,76));
 		 add(eno);
                  
                  
@@ -184,7 +194,7 @@ public class SignupTwo  extends JFrame implements ActionListener {
                  
                  
                  
-          getContentPane().setBackground(Color.WHITE);
+          getContentPane().setBackground(new Color(252,208,76));
 		setSize(850,800);
 		setLocation(300,20);
 		setVisible(true);

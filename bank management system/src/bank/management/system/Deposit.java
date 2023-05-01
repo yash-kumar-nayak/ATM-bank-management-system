@@ -37,6 +37,7 @@ public class Deposit extends JFrame implements ActionListener{
         
          deposit =new JButton("Deposit");
         deposit.setBounds(383, 525, 130, 30);
+        deposit.setBackground(Color.green);
         image.add(deposit);
        deposit.addActionListener(this);
         

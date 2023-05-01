@@ -14,12 +14,27 @@ public class SignupThree extends JFrame implements ActionListener  {
     String formno;
     SignupThree( String formno){
         this.formno=formno;
-        setTitle("SUBMISSION FORM");
+        setTitle("PAGE 3 :SUBMISSION FORM");
         
         JLabel additionalDetails=new JLabel("Page 3: Account Details ");
-		 additionalDetails.setFont(new Font("Raleway", Font.ITALIC,25));
+		 additionalDetails.setFont(new Font("Raleway", Font.BOLD,25));
 		 additionalDetails.setBounds(290, 70, 400, 30);
 		 add(additionalDetails);
+                 
+                 
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/bank.png"));
+		 Image i2=i1.getImage().getScaledInstance(80, 80, Image.SCALE_DEFAULT);
+		ImageIcon i3=new  ImageIcon(i2);
+		 JLabel label=new JLabel(i3);
+		 label.setBounds(25, 5, 100, 100);
+		 add(label);
+                 
+                 
+                JLabel formno1=new JLabel("APPLICATION FORM NO "+formno);
+		 formno1.setFont(new Font("Raleway", Font.BOLD,25));
+                 formno1.setForeground(Color.white);
+		 formno1.setBounds(200, 20, 600, 40);
+		 add(formno1);
                  
         JLabel name=new JLabel("Account Type");
 		 name.setFont(new Font("Raleway", Font.BOLD,23));
@@ -29,7 +44,7 @@ public class SignupThree extends JFrame implements ActionListener  {
                  
                 r1=new JRadioButton();
                 r1.setBounds(150, 170,20 ,30);
-                r1.setBackground(Color.WHITE);
+                r1.setBackground(new Color(115, 194, 251));
 		add(r1);
          JLabel sa=new JLabel("Saving Account");
 		 sa.setFont(new Font("Raleway", Font.BOLD,15));
@@ -39,7 +54,7 @@ public class SignupThree extends JFrame implements ActionListener  {
                  
                 r2=new JRadioButton();
                 r2.setBounds(430, 170,20 ,30);
-                r2.setBackground(Color.WHITE);
+                r2.setBackground(new Color(115, 194, 251));
 		add(r2);
                 
                  JLabel ca=new JLabel("Current Account");
@@ -49,7 +64,7 @@ public class SignupThree extends JFrame implements ActionListener  {
                  
                 r3=new JRadioButton();
                 r3.setBounds(150, 200,20 ,30);
-                r3.setBackground(Color.WHITE);
+                r3.setBackground(new Color(115, 194, 251));
 		add(r3);
                   JLabel rd=new JLabel("Recurring Deposit");
 		 rd.setFont(new Font("Arial", Font.BOLD,15));
@@ -60,7 +75,7 @@ public class SignupThree extends JFrame implements ActionListener  {
                  
                 r4=new JRadioButton();
                 r4.setBounds(430, 200,20 ,30);
-                r4.setBackground(Color.WHITE);
+                r4.setBackground(new Color(115, 194, 251));
 		add(r4);
                 
                      JLabel fd=new JLabel("Fixed Deposit ");
@@ -111,38 +126,38 @@ public class SignupThree extends JFrame implements ActionListener  {
 		 add(service);
                  
                  c1=new JCheckBox("ATM CARD");
-                 c1.setBackground(Color.WHITE);
+                 c1.setBackground(new Color(115, 194, 251));
                  c1.setFont(new Font("Raleway", Font.BOLD,16));
                   c1.setBounds(150,430,200,30);
                   add(c1);
                  c2=new JCheckBox("Internet Banking");
-                 c2.setBackground(Color.WHITE);
+                 c2.setBackground(new Color(115, 194, 251));
                  c2.setFont(new Font("Raleway", Font.BOLD,16));
                   c2.setBounds(430,430,200,30);
                   add(c2);
                  c3=new JCheckBox("Mobile Banking");
-                 c3.setBackground(Color.WHITE);
+                 c3.setBackground(new Color(115, 194, 251));
                  c3.setFont(new Font("Raleway", Font.BOLD,16));
                   c3.setBounds(150,460,200,30);
                   add(c3);
                  c4=new JCheckBox("EMAIL & SMS ALERT");
-                 c4.setBackground(Color.WHITE);
+                 c4.setBackground(new Color(115, 194, 251));
                  c4.setFont(new Font("Raleway", Font.BOLD,16));
                   c4.setBounds(430,460,200,30);
                   add(c4);
                  c5=new JCheckBox("Cheque Book");
-                 c5.setBackground(Color.WHITE);
+                 c5.setBackground(new Color(115, 194, 251));
                  c5.setFont(new Font("Raleway", Font.BOLD,16));
                   c5.setBounds(150,490,200,30);
                   add(c5);
                  c6=new JCheckBox("E-Statement");
-                 c6.setBackground(Color.WHITE);
+                 c6.setBackground(new Color(115, 194, 251));
                  c6.setFont(new Font("Raleway", Font.BOLD,16));
                   c6.setBounds(430,490,200,30);
                   add(c6);
                   
                  c7=new JCheckBox("I Hereby Declares That The Above Entered Details are Correct to The Best of My Knowledge");
-                 c7.setBackground(Color.WHITE);
+                 c7.setBackground(new Color(115, 194, 251));
                  c7.setFont(new Font("Raleway", Font.BOLD,13));
                   c7.setBounds(130,600,600,30);
                   add(c7);
@@ -155,7 +170,7 @@ public class SignupThree extends JFrame implements ActionListener  {
                  
                     cancel=new JButton("Cancel");
 		 cancel.setForeground(Color.WHITE);
-		 cancel.setBackground(Color.BLACK);
+		 cancel.setBackground(Color.red);
 		 cancel.setFont(new Font("Raleway", Font.ITALIC,14));
 		 cancel.setBounds(250,660,100,30);
 		 cancel.addActionListener(this);
@@ -164,7 +179,7 @@ public class SignupThree extends JFrame implements ActionListener  {
                  
                   submit=new JButton("Submit");
 		 submit.setForeground(Color.WHITE);
-		 submit.setBackground(Color.BLACK);
+		 submit.setBackground(Color.green);
 		 submit.setFont(new Font("Raleway", Font.ITALIC,14));
 		 submit.setBounds(420,660,100,30);
 		 submit.addActionListener(this);
@@ -172,7 +187,8 @@ public class SignupThree extends JFrame implements ActionListener  {
                  
          
         setLayout(null);
-         getContentPane().setBackground(Color.WHITE);
+//          getContentPane().setBackground(new Color(252,208,76));
+           getContentPane().setBackground(new Color(115, 194, 251));
 		setSize(850,800);
 		setLocation(300,20);
 		setVisible(true);
