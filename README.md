@@ -1,4 +1,11 @@
+
 # ATM-bank-management-system
+
+Atm system using core concepts of core Java like inheritance etc 
+
+
+
+
 
 1) use mysql
 
